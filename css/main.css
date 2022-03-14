@@ -577,6 +577,9 @@ body {
   .header__tel {
     display: none;
   }
+  .header__socially {
+    display: none;
+  }
   .header__right {
     max-width: 46px;
   }
