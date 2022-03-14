@@ -18,7 +18,9 @@
         justify-content: space-between;
         list-style-type: none;
         flex-wrap: wrap;
-        padding-right: 10px;
+        padding: 0;
+        margin-right: 10px;
+        margin-left: 5px;
     }
 
     &__item{
@@ -57,20 +59,16 @@
         justify-content: space-between;
         max-width: 46px;
         width: 100%;
-        padding-right: 5px;
-        padding-left: 5px;
-    }
+        margin-right: 5px;
+        margin-left: 5px;
 
-    &_social-insta{
-        max-width: 18px;
-        height: auto;
-        width: 100%;
-    }
+        &-insta:hover path{
+            fill: $main-black;
+        }
 
-    &_social-fb{
-        max-width: 10px;
-        height: auto;
-        width: 100%;
+        &-fb:hover path{
+            fill: $main-black;
+        }
     }
 
     &__tel{
@@ -113,9 +111,15 @@
         padding-left: 20px;
         padding-right: 20px;
 
+        &__right{
+            justify-content: space-around;
+
+        }
+
         &__list{
             max-width: 457px;
             width: 100%;
+            justify-content: space-around;
         }
     }
 }
@@ -128,6 +132,7 @@
 
         &__right{
             max-width: 294px;
+            justify-content: space-around;
         }
     }
 
