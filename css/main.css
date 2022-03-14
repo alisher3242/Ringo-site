@@ -493,6 +493,8 @@ body {
           justify-content: space-between;
   max-width: 46px;
   width: 100%;
+  padding-right: 5px;
+  padding-left: 5px;
 }
 
 .header_social-insta {
@@ -560,11 +562,23 @@ body {
   .header__list {
     display: none;
   }
+  .header__right {
+    max-width: 294px;
+  }
   .hamburger__button {
     display: block;
     background-color: transparent;
     border: none;
     cursor: pointer;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .header__socially {
+    display: none;
+  }
+  .header__right {
+    max-width: 166px;
   }
 }
 
