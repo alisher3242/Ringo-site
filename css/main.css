@@ -342,6 +342,42 @@ template {
 }
 
 /* FONTS */
+/* raleway-500 - latin_cyrillic */
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  src: local(""), url("../fonts/raleway-v26-latin_cyrillic-500.woff2") format("woff2"), url("../fonts/raleway-v26-latin_cyrillic-500.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* raleway-regular - latin_cyrillic */
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url("../fonts/raleway-v26-latin_cyrillic-regular.woff2") format("woff2"), url("../fonts/raleway-v26-latin_cyrillic-regular.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* raleway-600 - latin_cyrillic */
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 600;
+  src: local(""), url("../fonts/raleway-v26-latin_cyrillic-600.woff2") format("woff2"), url("../fonts/raleway-v26-latin_cyrillic-600.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* raleway-700 - latin_cyrillic */
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  src: local(""), url("../fonts/raleway-v26-latin_cyrillic-700.woff2") format("woff2"), url("../fonts/raleway-v26-latin_cyrillic-700.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
 /* GENERAL */
 *,
 *::before,
@@ -372,5 +408,179 @@ body {
   padding: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.header {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header__logo {
+  width: 122px;
+  height: 53px;
+}
+
+.header__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 487px;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  list-style-type: none;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-right: 10px;
+}
+
+.header__item {
+  padding-right: 5px;
+}
+
+.header__link {
+  text-decoration: none;
+  color: #282B22;
+  font-family: Raleway;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.header__link:hover {
+  color: #AE7B3C;
+}
+
+.header__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 299px;
+  width: 100%;
+}
+
+.header__socially {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 46px;
+  width: 100%;
+}
+
+.header_social-insta {
+  max-width: 18px;
+  height: auto;
+  width: 100%;
+}
+
+.header_social-fb {
+  max-width: 10px;
+  height: auto;
+  width: 100%;
+}
+
+.header__tel {
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: Lato;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #3D4A39;
+}
+
+.header__tel-large {
+  display: none;
+}
+
+.header__tel::before {
+  content: "";
+  width: 13px;
+  height: 20px;
+  display: inline-block;
+  background-image: url(../images/phone.png);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+  margin-right: 11px;
+}
+
+.close__button, .hamburger__button {
+  display: none;
+}
+
+@media only screen and (max-width: 1000px) {
+  .header {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .header__list {
+    max-width: 457px;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .header__list {
+    display: none;
+  }
+  .hamburger__button {
+    display: block;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .header {
+    padding: 15px 10px;
+  }
+  .header__logo {
+    width: 100px;
+    height: 43px;
+  }
+  .header__socially {
+    display: none;
+  }
+  .header__tel {
+    display: none;
+  }
 }
 /*# sourceMappingURL=main.css.map */

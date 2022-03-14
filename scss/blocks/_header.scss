@@ -1,0 +1,154 @@
+.header{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__logo{
+        width: 122px;
+        height: 53px;
+    }
+
+    &__list{
+        display: flex;
+        align-items: center;
+        max-width: 487px;
+        width: 100%;
+        justify-content: space-between;
+        list-style-type: none;
+        flex-wrap: wrap;
+        padding-right: 10px;
+    }
+
+    &__item{
+        padding-right: 5px;
+    }
+
+    &__link{
+        text-decoration: none;
+        color: $main-black;
+        font-family: Raleway;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 16px;
+        letter-spacing: 0em;
+        text-align: left;
+
+    }
+
+    &__link:hover{
+        color: $main-ferulous;
+
+    }
+
+    &__right{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 299px;
+        width: 100%;
+    }
+
+    &__socially{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 46px;
+        width: 100%;
+    }
+
+    &_social-insta{
+        max-width: 18px;
+        height: auto;
+        width: 100%;
+    }
+
+    &_social-fb{
+        max-width: 10px;
+        height: auto;
+        width: 100%;
+    }
+
+    &__tel{
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        font-family: Lato;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 20px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: $main-green;
+
+        &-large{
+            display: none;
+        }
+
+        &::before{
+            content: "";
+            width: 13px;
+            height: 20px;
+            display: inline-block;
+            background-image: url(../images/phone.png);
+            background-repeat: no-repeat;
+            background-size: auto;
+            background-position: center;
+            margin-right: 11px;
+        }
+    }
+}
+
+.close__button, .hamburger__button{
+    display: none;
+}
+
+@media only screen and(max-width:1000px){
+    .header{
+        padding-left: 20px;
+        padding-right: 20px;
+
+        &__list{
+            max-width: 457px;
+            width: 100%;
+        }
+    }
+}
+
+@media only screen and(max-width:640px){
+    .header{
+        &__list{
+            display: none;
+        }
+    }
+
+    .hamburger__button{
+        display: block;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+}
+
+@media only screen and(max-width:320px){
+    .header{
+        padding: 15px 10px;
+
+        &__logo{
+            width: 100px;
+            height: 43px;
+        }
+
+        &__socially{
+            display: none;
+        }
+
+        &__tel{
+            display: none;
+        }
+    }
+}
+
