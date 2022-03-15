@@ -5,10 +5,11 @@
     background-repeat: no-repeat;
     background-size: 1600px 687px;
     background-position: center;
+    max-height: 687px;
 }
 
 .hero{
-    padding-top: 120px;
+    padding-top: 118px;
     padding-bottom: 45px;
     display: flex;
     flex-direction: column;
@@ -41,7 +42,7 @@
         color: $main-white;
         opacity: 0.8;
         margin: 0;
-        margin-bottom: 48px;
+        margin-bottom: 50px;
     }
 
     &__button{
@@ -58,7 +59,8 @@
         background-color: $main-ferulous;
         border: none;
         cursor: pointer;
-        margin-bottom: 120px;
+        // margin-bottom: 120px;
+        max-width: 260px;
 
         &:hover{
             background: #CC9654;
@@ -66,12 +68,22 @@
         }
     }
 
+    &__center{
+        min-height: 182px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+        margin-bottom: 25px;
+    }
+
     &__line{
         display: inline-block;
         border: 1px solid $main-white;
         opacity: 0.4;
         width: 100%;
-        margin-bottom: 25px;
+        // margin-bottom: 25px;
     }
 
     .sliders{
@@ -138,18 +150,31 @@
         background-size: 640px 687px;
         background-position: center;
     }
+
+    .curtain{
+        display: none;
+        position: absolute;
+        top: 97px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.3);
+        z-index: 9;
+    }
+
 }
+
 
 @media only screen and(max-width:480px){
     .hero{
 
         &__hedding{
-            font-size: 37px;
+            font-size: 36px;
             line-height: 34px;
             margin-bottom: 28px;
-            max-width: 296px;
-    }
-}
+            max-width: 400px;
+            }
+        }
 }
 
 
@@ -183,11 +208,24 @@
 
         &__button{
             padding: 22px 72.5px;
-            margin-bottom: 62px;
+            max-width: 300px;
+            width: 100%;
+            // margin-bottom: 62px;
+        }
+
+        &__center{
+            min-height: 124px;
+            max-width: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            justify-content: space-between;
+            margin-bottom: 15px;
         }
 
         &__line{
-            margin-bottom: 15px;
+            // margin-bottom: 15px;
             border: 0.5px solid $main-white;
         }
 

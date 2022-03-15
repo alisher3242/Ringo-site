@@ -104,6 +104,7 @@
 
 .close__button, .hamburger__button{
     display: none;
+    padding-right: 0;
 }
 
 @media only screen and(max-width:1000px){
@@ -125,22 +126,51 @@
 }
 
 @media only screen and(max-width:640px){
-    .header{
-        &__list{
-            display: none;
-        }
-
-        &__right{
-            max-width: 294px;
-            justify-content: space-around;
-        }
-    }
-
     .hamburger__button{
         display: block;
         background-color: transparent;
         border: none;
         cursor: pointer;
+    }
+    
+    .header{
+        z-index: 11;
+
+        &__list{
+            position: absolute;
+            top: 97px;
+            right: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: start;
+            margin: 0;
+            max-width: 320px;
+            min-height: 687px;
+            background-color: $main-white;
+            padding-top: 30px;
+            padding-bottom: 474px;
+            padding-left: 26px;
+            gap: 25px;
+            display: none;
+            z-index: 10;
+        }
+
+        .close__button{
+            display: none;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }
+
+        // .hamburger__button{
+        //     // display: none;
+        // }
+
+        &__right{
+            max-width: 294px;
+            justify-content: space-around;
+        }
     }
 }
 
