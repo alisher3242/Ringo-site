@@ -21,6 +21,10 @@
         padding: 0;
         margin-right: 10px;
         margin-left: 5px;
+
+        &-large{
+            display: none;
+        }
     }
 
     &__item{
@@ -51,6 +55,10 @@
         justify-content: space-between;
         max-width: 299px;
         width: 100%;
+    }
+
+    &__button-large{
+        display: none;
     }
 
     &__socially{
@@ -134,8 +142,6 @@
     }
     
     .header{
-        z-index: 11;
-
         &__list{
             position: absolute;
             top: 97px;
@@ -187,6 +193,51 @@
     .header__right{
         max-width: 46px;
     }
+
+    .hamburger__button{
+        display: block;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+    
+    .header{
+        &__list{
+            position: absolute;
+            top: 97px;
+            right: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: start;
+            margin: 0;
+            max-width: 320px;
+            min-height: 687px;
+            background-color: $main-white;
+            padding-top: 30px;
+            padding-bottom: 474px;
+            padding-left: 26px;
+            gap: 25px;
+            display: none;
+            z-index: 10;
+        }
+
+        .close__button{
+            display: none;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }
+
+        // .hamburger__button{
+        //     // display: none;
+        // }
+
+        &__right{
+            max-width: 294px;
+            justify-content: space-around;
+        }
+    }
 }
 
 @media only screen and(max-width:320px){
@@ -199,12 +250,93 @@
         }
 
         &__socially{
-            display: none;
+            display: flex;
+            position: absolute;
+            left: 4px;
+            top: 229px;
+           
         }
 
         &__tel{
-            display: none;
+            display: flex;
+            position: absolute;
+            top: 374px;
+            left: 14px;
         }
+
+        &__right{
+            position: absolute;
+            top: 78px;
+            right: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: start;
+            margin: 0;
+            max-width: 320px;
+            width: 100%;
+            min-height: 495px;
+            background-color: $main-white;
+            padding-top: 40px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+            display: none;
+            z-index: 10;
+        }
+
+        &__button-large{
+            padding: 22px 72.5px;
+            max-width: 300px;
+            width: 100%;
+            font-family: Raleway;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 16px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: $main-white;
+            background-color: $main-ferulous;
+            border: none;
+            cursor: pointer;
+            position: absolute;
+            top: 425px;
+            left: 10px;
+        }
+
+        &__list{
+            display: none;
+
+            &-large{
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                justify-content: start;
+                margin: 0;
+                gap: 25px;
+                list-style-type: none;
+                padding: 0;
+                margin-bottom: 40px;
+            }
+        }
+
+        .close__button{
+            display: none;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }
+
+        // .hamburger__button{
+        //     // display: none;
+        // }
+
+        // &__right{
+        //     max-width: 294px;
+        //     justify-content: space-around;
+        // }
     }
+
+    
 }
 

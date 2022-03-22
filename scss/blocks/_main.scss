@@ -82,6 +82,7 @@
         display: inline-block;
         border: 1px solid $main-white;
         opacity: 0.4;
+        max-width: 1200px;
         width: 100%;
         // margin-bottom: 25px;
     }
@@ -174,6 +175,17 @@
             margin-bottom: 28px;
             max-width: 400px;
             }
+
+        &__center{
+            min-height: 150px;
+            // max-width: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            }
         }
 }
 
@@ -210,6 +222,7 @@
             padding: 22px 72.5px;
             max-width: 300px;
             width: 100%;
+            text-align: center;
             // margin-bottom: 62px;
         }
 
